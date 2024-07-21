@@ -1,0 +1,286 @@
+/*colors*/
+@define-color bg_dim #232a2e;
+@define-color bg0 #2d353b;
+@define-color bg1 #343f44;
+@define-color bg2 #3d484d;
+@define-color bg3 #475258;
+@define-color bg4 #4f585e;
+@define-color bg5 #56635f;
+@define-color red #e67e80;
+@define-color orange #e69875;
+@define-color yellow #dbbc7f;
+@define-color green #a7c080;
+@define-color blue #7fbbb3;
+@define-color aqua #83c092;
+@define-color purple #d699b6;
+@define-color fg #d3c6aa;
+
+
+
+
+* {
+    /*border: 2px;
+    border-color: @fg;
+    border-radius: 2px;*/
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family:Ubuntu ;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 10px;
+    margin: 1px;
+    
+}
+
+window#waybar {
+    background: @bg4;
+    padding: 5px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: @bg1;
+}
+
+#workspaces button {
+    transition: none;
+    color: @fg;
+    background: transparent;
+    padding: 3px;
+    font-size: 12px;
+}
+#workspaces button.active {
+	color: @green;
+	/*border-bottom-style: solid;
+	border-bottom-color: @green;*/
+	border: 1px solid @green;
+}
+
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: #383c4a;
+    background: #7c818c;
+}
+
+
+#language {
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#keyboard-state {
+    margin-right: 8px;
+    padding-right: 16px;
+    border-radius: 0px 10px 10px 0px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#custom-notification{
+	margin-right:8px;
+	padding-left: 16px;
+	padding-right: 18px;
+	border-radius: 10px;
+	color: @fg;
+	background: @bg1;
+}
+
+
+
+#custom-mail {
+    padding-right: 10px;
+    padding-left: 12px;
+    border-radius: 10px 10px 10px 10px;
+    transition: none;
+    color: @fg;
+    background: @bg1;
+}
+
+#custom-launcher {
+    margin-right: 8px;
+    margin-left: 0px;
+    padding-right: 14px;
+    padding-left: 12px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid @fg;
+    transition: none;
+    color: @fg;
+    background: @bg1;
+    font-size: 16px;
+}
+#custom-launcher:hover {
+	background-color: @fg;
+	color: @bg1;
+}
+
+
+
+#mode {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#clock {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px 10px 10px 10px;
+    transition: none;
+    color: @fg;
+    background: @bg1;
+}
+
+#custom-weather {
+    padding-right: 16px;
+    border-radius: 10px 10px 10px 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#wireplumber {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: @fg;
+    background: @bg1;
+}
+
+#wireplumber.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+#network {
+    background-color: #383c4a;
+    padding-left : 16px;
+    padding-right : 16px;
+    border-radius : 10px;
+    color: #ffffff;
+}
+
+#window{
+	color: @purple;
+	padding-left: 5px;
+
+}
+#memory {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#temperature {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#backlight {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: @fg;
+    background: @bg1;
+}
+
+#battery {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: @fg;
+    background: @bg1;
+}
+
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #ffbe61;
+    color: black;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#bluetooth {
+    margin-right:8px;	
+    padding-left:16px;
+    padding-right:16px;
+    border-radius:10px;
+    color: @fg;
+    background: @bg1;
+
+}
+
+#tray {
+	margin-right:8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: @fg;
+    background: @bg1;
+}
+
+#custom-power {
+	color: #ffffff;
+	background: @red;
+	padding-left: 16px;
+	padding-right: 17px;
+	border-radius: 10px;
+
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
