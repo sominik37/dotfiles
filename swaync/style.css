@@ -1,0 +1,339 @@
+/*
+ * Everforest-inspired theme for swaync
+ */
+
+@define-color bg_dim #232a2e;
+@define-color bg0 #2d353b;
+@define-color bg1 #343f44;
+@define-color bg2 #3d484d;
+@define-color bg3 #475258;
+@define-color bg4 #4f585e;
+@define-color bg5 #56635f;
+@define-color red #e67e80;
+@define-color orange #e69875;
+@define-color yellow #dbbc7f;
+@define-color green #a7c080;
+@define-color blue #7fbbb3;
+@define-color aqua #83c092;
+@define-color purple #d699b6;
+@define-color fg #d3c6aa;
+
+* {
+    font-family: "Ubuntu", monospace;
+    font-size: 14px;
+}
+
+.notification-row {
+    outline: none;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+    background: @bg1;
+}
+
+.notification {
+    border-radius: 8px;
+    margin: 6px 12px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7);
+    padding: 0;
+}
+
+.notification-content {
+    background: @bg0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.close-button {
+    background: @bg3;
+    color: @fg;
+    text-shadow: none;
+    padding: 0;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: none;
+    border: none;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.close-button:hover {
+    box-shadow: none;
+    background: @bg4;
+    transition: all 0.15s ease-in-out;
+}
+
+.notification-default-action,
+.notification-action {
+    padding: 4px;
+    margin: 0;
+    box-shadow: none;
+    background: @bg2;
+    border: 1px solid @bg3;
+    color: @fg;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+    background: @bg3;
+}
+
+.notification-default-action {
+    border-radius: 8px;
+}
+
+.notification-default-action:not(:only-child) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.notification-action {
+    border-radius: 0px;
+    border-top: none;
+    border-right: none;
+}
+
+.notification-action:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+.notification-action:last-child {
+    border-bottom-right-radius: 8px;
+    border-right: 1px solid @bg3;
+}
+
+.image {
+    margin-right: 14px;
+}
+
+.body-image {
+    margin-top: 6px;
+    background-color: @bg0;
+    border-radius: 8px;
+}
+
+.summary {
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    color: @fg;
+    text-shadow: none;
+}
+
+.time {
+    font-size: 12px;
+    font-weight: bold;
+    background: transparent;
+    color: @fg;
+    text-shadow: none;
+    margin-right: 18px;
+}
+
+.body {
+    font-size: 14px;
+    font-weight: normal;
+    background: transparent;
+    color: @fg;
+    text-shadow: none;
+}
+
+.control-center {
+    background: @bg_dim;
+    border: 2px;
+    border-color: @fg;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-placeholder {
+    opacity: 0.5;
+}
+
+.floating-notifications {
+    background: transparent;
+}
+
+.widget-title {
+    margin: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: @fg;
+}
+
+.widget-title > button {
+    font-size: 14px;
+    color: @fg;
+    text-shadow: none;
+    background: @bg1;
+    border: 1px solid @bg3;
+    box-shadow: none;
+    border-radius: 8px;
+}
+
+.widget-title > button:hover {
+    background: @bg2;
+}
+
+.widget-dnd {
+    margin: 8px;
+    font-size: 14px;
+    color: @fg;
+    background: @bg1;
+    border: 1px solid @fg;
+    box-shadow: none;
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.widget-dnd > switch {
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+    background: @bg2;
+    border-radius: 14px;
+    min-height: 24px;
+    min-width: 46px;
+}
+
+.widget-dnd > switch:checked {
+    background: @green;
+}
+
+.widget-dnd > switch slider {
+    background: @fg;
+    border-radius: 12px;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.widget-label {
+    margin: 8px;
+    font-size: 14px;
+    color: @fg;
+}
+
+.widget-label > button {
+    font-size: 14px;
+    color: @fg;
+    text-shadow: none;
+    background: @bg1;
+    border: 1px solid @bg3;
+    box-shadow: none;
+    border-radius: 8px;
+}
+
+.widget-label > button:hover {
+    background: @bg2;
+}
+
+.widget-mpris {
+    margin: 8px;
+    color: @fg;
+    background: @bg1;
+    border: 1px solid @bg3;
+    border-radius: 8px;
+}
+
+.widget-mpris > box {
+    padding: 8px;
+}
+
+.widget-mpris-player {
+    padding: 8px;
+    background: @bg0;
+}
+
+.widget-mpris-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.widget-mpris-subtitle {
+    font-size: 12px;
+}
+
+.widget-buttons-grid {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    background: @bg1;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    margin: 3px;
+    background: @bg2;
+    border-radius: 8px;
+    color: @fg;
+    font-size: 14px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: @bg3;
+}
+
+.widget-volume {
+    margin: 8px;
+    background: @bg1;
+    color: @fg;
+    padding: 4px;
+    border: 1px solid @fg;
+    border-radius: 8px;
+}
+
+.widget-volume > box > button {
+    background: @bg2;
+    border-radius: 8px;
+}
+
+.widget-volume > box > button:hover {
+    background: @bg3;
+}
+
+.widget-volume > scale > trough {
+    background-color: @bg2;
+    border-radius: 8px;
+    margin: 0 4px;
+}
+
+.widget-volume > scale > trough > highlight {
+    background-color: @blue;
+    border-radius: 8px;
+}
+
+/* ... (previous CSS remains the same) ... */
+
+.widget-backlight {
+    margin: 8px;
+    background: @bg1;
+    color:@fg;
+    padding: 4px;
+    border: 1px solid @fg;
+    border-radius: 8px;
+}
+
+.widget-backlight > box > button {
+    background: @bg2;
+    border-radius: 8px;
+}
+
+.widget-backlight > box > button:hover {
+    background: @bg3;
+}
+
+.widget-backlight > scale > trough {
+    background-color: @bg2;
+    border-radius: 8px;
+    margin: 0 4px;
+}
+
+.widget-backlight > scale > trough > highlight {
+    background-color: @yellow;
+    border-radius: 8px;
+}
+
+/* ... (rest of the previous CSS remains the same) ... */
